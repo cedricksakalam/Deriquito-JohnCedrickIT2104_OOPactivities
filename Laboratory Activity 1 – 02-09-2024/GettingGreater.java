@@ -13,7 +13,7 @@ public class GettingGreater {
 
         chValue.close();
 
-        int max = Math.max(ch1,ch2);
+        char max = Math.max (char)(ch1,ch2);
         System.out.println("----------------------------");
         System.out.println("The character with a greater value is: " + max);
         System.out.println("----------------------------");
