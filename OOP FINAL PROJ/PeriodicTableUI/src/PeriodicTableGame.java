@@ -1,21 +1,21 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import javax.swing.*;
 
 public class PeriodicTableGame extends JFrame {
-    private final Map<String, Element> ELEMENTS = new HashMap<>();
-    private int questionCount = 1;
-    private int score = 0;
-    private String correctAnswer;
-    private String currentElement;
 
+    private static final Map<String, Element> ELEMENTS = new HashMap<>();
     private JLabel titleLabel, questionLabel, questionCountLabel, feedbackLabel, finalScoreLabel;
     private JTextField answerField;
-    private JButton submitButton, nextQuestionButton, retakeButton, viewTableButton;
+    private JButton submitButton, nextQuestionButton, retakeButton, viewTableButton, helpButton;
+    private int questionCount = 1;
+    private int score = 0;
+    private String currentElement;
+    private String correctAnswer;
 
     public PeriodicTableGame() {
         // Initialize Elements
@@ -23,10 +23,9 @@ public class PeriodicTableGame extends JFrame {
 
         // Set up the frame
         setTitle("Elemental Explorer");
-        setSize(400, 500);
+        setSize(400, 550);  // Fixed window size of 400x550
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setResizable(false);
-        setLayout(null);
+        setLayout(null);  // Using absolute layout to manually position components
 
         getContentPane().setBackground(new Color(12, 100, 120));
 
@@ -35,6 +34,68 @@ public class PeriodicTableGame extends JFrame {
 
         // Start the game
         askQuestion();
+    }
+
+    private void setupComponents() {
+        titleLabel = new JLabel("Elemental Guesser");
+        titleLabel.setBounds(110, 20, 200, 30);
+        titleLabel.setFont(new Font("Papyrus", Font.BOLD, 20));
+        titleLabel.setForeground(Color.WHITE);
+        add(titleLabel);
+
+        questionCountLabel = new JLabel("Question: " + questionCount);
+        questionCountLabel.setBounds(160, 60, 200, 30);
+        questionCountLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+        questionCountLabel.setForeground(Color.WHITE);
+        add(questionCountLabel);
+
+        questionLabel = new JLabel("");
+        questionLabel.setBounds(50, 100, 300, 30);
+        questionLabel.setFont(new Font("Arial", Font.ITALIC, 14));
+        questionLabel.setForeground(Color.WHITE);
+        add(questionLabel);
+
+        answerField = new JTextField();
+        answerField.setBounds(100, 140, 200, 30);
+        add(answerField);
+
+        submitButton = new JButton("Submit");
+        submitButton.setBounds(100, 180, 200, 30);
+        submitButton.addActionListener(new SubmitButtonListener());
+        add(submitButton);
+
+        nextQuestionButton = new JButton("Next Question");
+        nextQuestionButton.setBounds(100, 220, 200, 30);
+        nextQuestionButton.addActionListener(new NextQuestionButtonListener());
+        add(nextQuestionButton);
+
+        feedbackLabel = new JLabel("");
+        feedbackLabel.setBounds(100, 260, 300, 30);
+        feedbackLabel.setForeground(Color.GREEN);
+        add(feedbackLabel);
+
+        finalScoreLabel = new JLabel("");
+        finalScoreLabel.setBounds(100, 300, 300, 30);
+        finalScoreLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        finalScoreLabel.setForeground(Color.BLUE);
+        add(finalScoreLabel);
+
+        retakeButton = new JButton("Retry");
+        retakeButton.setBounds(100, 340, 200, 30);
+        retakeButton.setEnabled(false);
+        retakeButton.addActionListener(e -> resetGame());
+        add(retakeButton);
+
+        viewTableButton = new JButton("Study Area");
+        viewTableButton.setBounds(100, 380, 200, 30);
+        viewTableButton.setEnabled(false);
+        viewTableButton.addActionListener(e -> showPeriodicTable());
+        add(viewTableButton);
+
+        helpButton = new JButton("Help");
+        helpButton.setBounds(100, 420, 200, 30);
+        helpButton.addActionListener(e -> showHelp());
+        add(helpButton);
     }
 
     private void initializeElements() {
@@ -158,63 +219,6 @@ public class PeriodicTableGame extends JFrame {
         ELEMENTS.put("Oganesson", new Element("Og", 118));
     }
 
-    private void setupComponents() {
-        titleLabel = new JLabel("Elemental Guesser");
-        titleLabel.setBounds(110, 20, 200, 30);
-        titleLabel.setFont(new Font("Papyrus", Font.BOLD, 20));
-        titleLabel.setForeground(Color.WHITE);
-        add(titleLabel);
-
-        questionCountLabel = new JLabel("Question: " + questionCount);
-        questionCountLabel.setBounds(160, 60, 200, 30);
-        questionCountLabel.setFont(new Font("Arial", Font.PLAIN, 14));
-        questionCountLabel.setForeground(Color.WHITE);
-        add(questionCountLabel);
-
-        questionLabel = new JLabel("");
-        questionLabel.setBounds(50, 100, 300, 30);
-        questionLabel.setFont(new Font("Arial", Font.ITALIC, 14));
-        questionLabel.setForeground(Color.WHITE);
-        add(questionLabel);
-
-        answerField = new JTextField();
-        answerField.setBounds(100, 140, 200, 30);
-        add(answerField);
-
-        submitButton = new JButton("Submit");
-        submitButton.setBounds(100, 180, 200, 30);
-        submitButton.addActionListener(new SubmitButtonListener());
-        add(submitButton);
-
-        nextQuestionButton = new JButton("Next Question");
-        nextQuestionButton.setBounds(100, 220, 200, 30);
-        nextQuestionButton.addActionListener(new NextQuestionButtonListener());
-        add(nextQuestionButton);
-
-        feedbackLabel = new JLabel("");
-        feedbackLabel.setBounds(100, 260, 300, 30);
-        feedbackLabel.setForeground(Color.GREEN);
-        add(feedbackLabel);
-
-        finalScoreLabel = new JLabel("");
-        finalScoreLabel.setBounds(100, 300, 300, 30);
-        finalScoreLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        finalScoreLabel.setForeground(Color.BLUE);
-        add(finalScoreLabel);
-
-        retakeButton = new JButton("Retry");
-        retakeButton.setBounds(100, 340, 200, 30);
-        retakeButton.setEnabled(false);
-        retakeButton.addActionListener(e -> resetGame());
-        add(retakeButton);
-
-        viewTableButton = new JButton("Study Area");
-        viewTableButton.setBounds(100, 380, 200, 30);
-        viewTableButton.setEnabled(false);
-        viewTableButton.addActionListener(e -> showPeriodicTable());
-        add(viewTableButton);
-    }
-
     private void askQuestion() {
         if (questionCount > 25) {
             displayFinalScore();
@@ -281,6 +285,10 @@ public class PeriodicTableGame extends JFrame {
         askQuestion();
     }
 
+    private void showHelp() {
+        Help.showHelp();
+    }
+
     private class SubmitButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -311,9 +319,11 @@ public class PeriodicTableGame extends JFrame {
     }
 
     private void showPeriodicTable() {
+        Ptable.main(new String[]{});
         dispose();
         viewTableButton.setEnabled(false);
-        Ptable.main(new String[]{});
+        // Example of how you could call your Periodic Table view
+        // Ptable.main(new String[]{});
     }
 
     public static void main(String[] args) {
