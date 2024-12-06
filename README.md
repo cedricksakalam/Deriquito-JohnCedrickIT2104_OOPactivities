@@ -1,45 +1,54 @@
-Elemental Explorer - Periodic Table Game
- I. Project Overview
-  Elemental Explorer is an interactive quiz game designed to test and enhance your knowledge of the periodic table. The game challenges players with up to 25 questions about chemical elements, including their symbols and atomic numbers. Players can review their final score and access a study mode to improve their periodic table expertise.
+# Elemental Explorer: Periodic Table Game
 
- II. Object-Oriented Programming (OOP) Principles
- This project employs fundamental OOP principles to ensure clean, maintainable, and modular code:
+## I. Project Overview
+**Elemental Explorer** is an interactive educational game designed to test and enhance the player's knowledge of the periodic table. Through engaging gameplay, users can answer questions about chemical elements, including their symbols and atomic numbers. The game also features a study area for self-paced learning, score tracking, and a retry option for improving performance.
 
- Encapsulation:
-  - The Element class encapsulates the properties of a chemical element (symbol and atomicNumber), ensuring clear separation of data and behavior.
-  - Private fields and methods are used where appropriate to prevent unauthorized access.
+---
 
- Abstraction:
-  - The main game logic is abstracted into methods like askQuestion(), checkAnswer(), and resetGame(), providing a clear interface for game mechanics.
+## II. Application of OOP Principles
+### 1. Abstraction
+- **Simplified Interfaces**: The program abstracts complex details of element management and question generation.
+- **Abstract Class**: The `Question` class serves as a blueprint for creating specific question types (e.g., `AtomicNumberQuestion`, `SymbolQuestion`).
 
- Inheritance:
-  - The game extends JFrame to inherit its GUI capabilities and overrides its functionalities to customize the user interface.
+### 2. Encapsulation
+- **Data and Behavior Encapsulation**:
+  - **`Element` Class**: Encapsulates properties like `name`, `symbol`, and `atomicNumber` with private access and public getter methods.
+  - **`PeriodicTableGame` Class**: Encapsulates game state (`score`, `questionCount`) and manages game flow through public methods.
 
- Polymorphism:
-  - Action listeners (SubmitButtonListener and NextQuestionButtonListener) utilize polymorphism by implementing the ActionListener interface, enabling dynamic behavior for different button actions.
+### 3. Inheritance
+- **Extending Functionality**:
+  - The `Question` class is extended by `AtomicNumberQuestion` and `SymbolQuestion` to implement specialized question logic.
+  - The `PeriodicTableGame` class extends `JFrame` to inherit graphical user interface (GUI) capabilities.
 
- Modularity:
-  - The game is divided into distinct methods and components (e.g., element initialization, GUI setup), promoting code reuse and easier debugging.
- III. Sustainable Development Goal (SDG) Integration
-  - This project aligns with SDG 4: Quality Education by offering an engaging, gamified learning experience. The Periodic Table Game aims to:
-  - Make science education accessible and interactive.
-  - Foster curiosity and understanding of chemistry among learners.
-  - Provide a self-paced platform for students to improve their knowledge.
- By gamifying the periodic table, this project encourages learning through play, addressing the need for innovative educational tools.
+### 4. Polymorphism
+- **Dynamic Behavior**:
+  - The abstract `generate()` method in `Question` is overridden by subclasses for specific question logic.
+  - The `askQuestion()` method interacts generically with any `Question` type, ensuring extensibility.
 
- IV. Instructions for Running the Program
-  Follow these steps to run the game:
+### 5. Composition
+- **Modular Design**:
+  - Each question type (e.g., `AtomicNumberQuestion`, `SymbolQuestion`) holds a reference to an `Element` object.
+  - The `ElementRepository` serves as a centralized source of periodic table data, promoting modular and reusable logic.
 
-  Prerequisites:
-  - Ensure you have Java Development Kit (JDK) 8 or higher installed.
-  - A Java IDE like IntelliJ IDEA, Eclipse, or NetBeans is recommended for easier execution and debugging.
-  
-  Gameplay:
-  - On launch, the game presents a question about a chemical element.
-  - Enter your answer in the provided text field and click Submit to check your response.
-  - Click Next Question to proceed to the next question.
-  - Once all questions are answered, view your final score and choose to retry or enter the study mode.
+---
 
-  Study Mode:
-  - After completing the game, access the "Study Area" to review a detailed periodic table.
-Enjoy learning with Elemental Explorer and make chemistry fun! 🎉
+## III. Sustainable Development Goal (SDG) Integration
+### **SDG Goal 4: Quality Education**
+This project supports **SDG 4** by promoting science education through interactive learning.  
+- **Educational Value**: Engages users in learning chemical elements in a fun and memorable way.  
+- **Accessibility**: The study area enables users to explore the periodic table independently.  
+- **Retention**: Testing with immediate feedback enhances knowledge retention of periodic table facts.  
+
+---
+
+## IV. Instructions for Running the Program
+
+### **Requirements**
+- **Java Development Kit (JDK)**: Version 8 or later.
+- A **Java IDE** (e.g., IntelliJ IDEA, Eclipse) or command-line tools for running Java programs.
+
+### **Steps to Run**
+1. **Clone or Download the Repository**  
+   Download the project files or clone the repository using the command:
+   ```bash
+   git clone https://github.com/your-repo/PeriodicTableGame.git
