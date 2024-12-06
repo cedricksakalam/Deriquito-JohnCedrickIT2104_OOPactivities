@@ -48,3 +48,11 @@ By blending education and entertainment, **Elemental Explorer** promotes critica
    Download the project files or clone the repository using the command:
    ```bash
    git clone https://github.com/your-repo/PeriodicTableGame.git
+2. **Run the Application**
+  Execute the Main class to start the game:
+   ```bash
+   java Main
+
+---
+## Acknowledgement
+
