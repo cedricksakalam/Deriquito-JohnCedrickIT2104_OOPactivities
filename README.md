@@ -57,7 +57,6 @@ By blending education and entertainment, **Elemental Explorer** promotes critica
 
 ---
 ## Acknowledgement
-We extend our heartfelt gratitude to **Sir Jayson Abratique** for his invaluable guidance and support throughout the development of this project. His expertise, encouragement, and passion for education have been instrumental in shaping **Elemental Explorer** into an engaging and effective learning tool. 
+I would like to express my heartfelt gratitude to Sir Jayson Abratique for his invaluable guidance and support throughout the development of this project. His expertise, encouragement, and passion for education have been crucial in shaping Elemental Explorer into an engaging and effective learning tool.
 
-Thank you for inspiring us to create meaningful solutions that promote quality education and foster a love for learning. Your dedication to teaching and innovation continues to make a significant impact on our journey.
-
+Thank you for inspiring me to create meaningful solutions that promote quality education and foster a love for learning. Your dedication to teaching and innovation continues to have a significant impact on my journey.
