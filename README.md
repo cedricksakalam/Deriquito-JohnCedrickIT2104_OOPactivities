@@ -52,6 +52,8 @@ By blending education and entertainment, **Elemental Explorer** promotes critica
   Execute the Main class to start the game:
    ```bash
    java Main
+3. **How To Play**
+   The program includes an integrated feature that displays detailed instructions when the 'Help' button is pressed. This allows users to easily access guidance on how to navigate and use the application effectively.
 
 ---
 ## Acknowledgement
