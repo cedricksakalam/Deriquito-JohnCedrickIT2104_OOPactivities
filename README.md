@@ -25,19 +25,15 @@
   - The abstract `generate()` method in `Question` is overridden by subclasses for specific question logic.
   - The `askQuestion()` method interacts generically with any `Question` type, ensuring extensibility.
 
-### 5. Composition
-- **Modular Design**:
-  - Each question type (e.g., `AtomicNumberQuestion`, `SymbolQuestion`) holds a reference to an `Element` object.
-  - The `ElementRepository` serves as a centralized source of periodic table data, promoting modular and reusable logic.
-
 ---
 
 ## III. Sustainable Development Goal (SDG) Integration
-### **SDG Goal 4: Quality Education**
-This project supports **SDG 4** by promoting science education through interactive learning.  
-- **Educational Value**: Engages users in learning chemical elements in a fun and memorable way.  
-- **Accessibility**: The study area enables users to explore the periodic table independently.  
-- **Retention**: Testing with immediate feedback enhances knowledge retention of periodic table facts.  
+
+This project supports **Sustainable Development Goal 4: Quality Education** by creating an inclusive and equitable platform for science education through gamification. **Elemental Explorer** transforms the study of the periodic table into an interactive and enjoyable experience, making it more engaging and effective.
+
+The game fosters active learning by encouraging players to recall and apply their knowledge of chemical elements, with immediate feedback to enhance understanding and retention. Additionally, the study area provides users with the opportunity to learn at their own pace, offering unrestricted access to explore and master the periodic table.
+
+By blending education and entertainment, **Elemental Explorer** promotes critical thinking and scientific literacy. It empowers students and enthusiasts to deepen their chemistry knowledge in a way that is not only meaningful but also fun and memorable.
 
 ---
 
