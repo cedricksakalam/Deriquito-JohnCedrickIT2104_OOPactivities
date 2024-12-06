@@ -1,0 +1,134 @@
+// File: ElementRepository.java
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ElementRepository {
+    private static final Map<String, Element> ELEMENTS = new HashMap<>();
+
+    static {
+        ELEMENTS.put("Hydrogen", new Element("Hydrogen", "H", 1));
+        ELEMENTS.put("Helium", new Element("Helium", "He", 2));
+        ELEMENTS.put("Lithium", new Element("Lithium", "Li", 3));
+        ELEMENTS.put("Beryllium", new Element("Beryllium", "Be", 4));
+        ELEMENTS.put("Boron", new Element("Boron", "B", 5));
+        ELEMENTS.put("Carbon", new Element("Carbon", "C", 6));
+        ELEMENTS.put("Nitrogen", new Element("Nitrogen", "N", 7));
+        ELEMENTS.put("Oxygen", new Element("Oxygen", "O", 8));
+        ELEMENTS.put("Fluorine", new Element("Fluorine", "F", 9));
+        ELEMENTS.put("Neon", new Element("Neon", "Ne", 10));
+        ELEMENTS.put("Sodium", new Element("Sodium", "Na", 11));
+        ELEMENTS.put("Magnesium", new Element("Magnesium", "Mg", 12));
+        ELEMENTS.put("Aluminum", new Element("Aluminum", "Al", 13));
+        ELEMENTS.put("Silicon", new Element("Silicon", "Si", 14));
+        ELEMENTS.put("Phosphorus", new Element("Phosphorus", "P", 15));
+        ELEMENTS.put("Sulfur", new Element("Sulfur", "S", 16));
+        ELEMENTS.put("Chlorine", new Element("Chlorine", "Cl", 17));
+        ELEMENTS.put("Argon", new Element("Argon", "Ar", 18));
+        ELEMENTS.put("Potassium", new Element("Potassium", "K", 19));
+        ELEMENTS.put("Calcium", new Element("Calcium", "Ca", 20));
+        ELEMENTS.put("Scandium", new Element("Scandium", "Sc", 21));
+        ELEMENTS.put("Titanium", new Element("Titanium", "Ti", 22));
+        ELEMENTS.put("Vanadium", new Element("Vanadium", "V", 23));
+        ELEMENTS.put("Chromium", new Element("Chromium", "Cr", 24));
+        ELEMENTS.put("Manganese", new Element("Manganese", "Mn", 25));
+        ELEMENTS.put("Iron", new Element("Iron", "Fe", 26));
+        ELEMENTS.put("Cobalt", new Element("Cobalt", "Co", 27));
+        ELEMENTS.put("Nickel", new Element("Nickel", "Ni", 28));
+        ELEMENTS.put("Copper", new Element("Copper", "Cu", 29));
+        ELEMENTS.put("Zinc", new Element("Zinc", "Zn", 30));
+        ELEMENTS.put("Gallium", new Element("Gallium", "Ga", 31));
+        ELEMENTS.put("Germanium", new Element("Germanium", "Ge", 32));
+        ELEMENTS.put("Arsenic", new Element("Arsenic", "As", 33));
+        ELEMENTS.put("Selenium", new Element("Selenium", "Se", 34));
+        ELEMENTS.put("Bromine", new Element("Bromine", "Br", 35));
+        ELEMENTS.put("Krypton", new Element("Krypton", "Kr", 36));
+        ELEMENTS.put("Rubidium", new Element("Rubidium", "Rb", 37));
+        ELEMENTS.put("Strontium", new Element("Strontium", "Sr", 38));
+        ELEMENTS.put("Yttrium", new Element("Yttrium", "Y", 39));
+        ELEMENTS.put("Zirconium", new Element("Zirconium", "Zr", 40));
+        ELEMENTS.put("Niobium", new Element("Niobium", "Nb", 41));
+        ELEMENTS.put("Molybdenum", new Element("Molybdenum", "Mo", 42));
+        ELEMENTS.put("Technetium", new Element("Technetium", "Tc", 43));
+        ELEMENTS.put("Ruthenium", new Element("Ruthenium", "Ru", 44));
+        ELEMENTS.put("Rhodium", new Element("Rhodium", "Rh", 45));
+        ELEMENTS.put("Palladium", new Element("Palladium", "Pd", 46));
+        ELEMENTS.put("Silver", new Element("Silver", "Ag", 47));
+        ELEMENTS.put("Cadmium", new Element("Cadmium", "Cd", 48));
+        ELEMENTS.put("Indium", new Element("Indium", "In", 49));
+        ELEMENTS.put("Tin", new Element("Tin", "Sn", 50));
+        ELEMENTS.put("Antimony", new Element("Antimony", "Sb", 51));
+        ELEMENTS.put("Tellurium", new Element("Tellurium", "Te", 52));
+        ELEMENTS.put("Iodine", new Element("Iodine", "I", 53));
+        ELEMENTS.put("Xenon", new Element("Xenon", "Xe", 54));
+        ELEMENTS.put("Cesium", new Element("Cesium", "Cs", 55));
+        ELEMENTS.put("Barium", new Element("Barium", "Ba", 56));
+        ELEMENTS.put("Lanthanum", new Element("Lanthanum", "La", 57));
+        ELEMENTS.put("Cerium", new Element("Cerium", "Ce", 58));
+        ELEMENTS.put("Praseodymium", new Element("Praseodymium", "Pr", 59));
+        ELEMENTS.put("Neodymium", new Element("Neodymium", "Nd", 60));
+        ELEMENTS.put("Promethium", new Element("Promethium", "Pm", 61));
+        ELEMENTS.put("Samarium", new Element("Samarium", "Sm", 62));
+        ELEMENTS.put("Europium", new Element("Europium", "Eu", 63));
+        ELEMENTS.put("Gadolinium", new Element("Gadolinium", "Gd", 64));
+        ELEMENTS.put("Terbium", new Element("Terbium", "Tb", 65));
+        ELEMENTS.put("Dysprosium", new Element("Dysprosium", "Dy", 66));
+        ELEMENTS.put("Holmium", new Element("Holmium", "Ho", 67));
+        ELEMENTS.put("Erbium", new Element("Erbium", "Er", 68));
+        ELEMENTS.put("Thulium", new Element("Thulium", "Tm", 69));
+        ELEMENTS.put("Ytterbium", new Element("Ytterbium", "Yb", 70));
+        ELEMENTS.put("Lutetium", new Element("Lutetium", "Lu", 71));
+        ELEMENTS.put("Hafnium", new Element("Hafnium", "Hf", 72));
+        ELEMENTS.put("Tantalum", new Element("Tantalum", "Ta", 73));
+        ELEMENTS.put("Tungsten", new Element("Tungsten", "W", 74));
+        ELEMENTS.put("Rhenium", new Element("Rhenium", "Re", 75));
+        ELEMENTS.put("Osmium", new Element("Osmium", "Os", 76));
+        ELEMENTS.put("Iridium", new Element("Iridium", "Ir", 77));
+        ELEMENTS.put("Platinum", new Element("Platinum", "Pt", 78));
+        ELEMENTS.put("Gold", new Element("Gold", "Au", 79));
+        ELEMENTS.put("Mercury", new Element("Mercury", "Hg", 80));
+        ELEMENTS.put("Thallium", new Element("Thallium", "Tl", 81));
+        ELEMENTS.put("Lead", new Element("Lead", "Pb", 82));
+        ELEMENTS.put("Bismuth", new Element("Bismuth", "Bi", 83));
+        ELEMENTS.put("Polonium", new Element("Polonium", "Po", 84));
+        ELEMENTS.put("Astatine", new Element("Astatine", "At", 85));
+        ELEMENTS.put("Radon", new Element("Radon", "Rn", 86));
+        ELEMENTS.put("Francium", new Element("Francium", "Fr", 87));
+        ELEMENTS.put("Radium", new Element("Radium", "Ra", 88));
+        ELEMENTS.put("Actinium", new Element("Actinium", "Ac", 89));
+        ELEMENTS.put("Thorium", new Element("Thorium", "Th", 90));
+        ELEMENTS.put("Protactinium", new Element("Protactinium", "Pa", 91));
+        ELEMENTS.put("Uranium", new Element("Uranium", "U", 92));
+        ELEMENTS.put("Neptunium", new Element("Neptunium", "Np", 93));
+        ELEMENTS.put("Plutonium", new Element("Plutonium", "Pu", 94));
+        ELEMENTS.put("Americium", new Element("Americium", "Am", 95));
+        ELEMENTS.put("Curium", new Element("Curium", "Cm", 96));
+        ELEMENTS.put("Berkelium", new Element("Berkelium", "Bk", 97));
+        ELEMENTS.put("Californium", new Element("Californium", "Cf", 98));
+        ELEMENTS.put("Einsteinium", new Element("Einsteinium", "Es", 99));
+        ELEMENTS.put("Fermium", new Element("Fermium", "Fm", 100));
+        ELEMENTS.put("Mendelevium", new Element("Mendelevium", "Md", 101));
+        ELEMENTS.put("Nobelium", new Element("Nobelium", "No", 102));
+        ELEMENTS.put("Lawrencium", new Element("Lawrencium", "Lr", 103));
+        ELEMENTS.put("Rutherfordium", new Element("Rutherfordium", "Rf", 104));
+        ELEMENTS.put("Dubnium", new Element("Dubnium", "Db", 105));
+        ELEMENTS.put("Seaborgium", new Element("Seaborgium", "Sg", 106));
+        ELEMENTS.put("Bohrium", new Element("Bohrium", "Bh", 107));
+        ELEMENTS.put("Hassium", new Element("Hassium", "Hs", 108));
+        ELEMENTS.put("Meitnerium", new Element("Meitnerium", "Mt", 109));
+        ELEMENTS.put("Darmstadtium", new Element("Darmstadtium", "Ds", 110));
+        ELEMENTS.put("Roentgenium", new Element("Roentgenium", "Rg", 111));
+        ELEMENTS.put("Copernicium", new Element("Copernicium", "Cn", 112));
+        ELEMENTS.put("Nihonium", new Element("Nihonium", "Nh", 113));
+        ELEMENTS.put("Flerovium", new Element("Flerovium", "Fl", 114));
+        ELEMENTS.put("Moscovium", new Element("Moscovium", "Mc", 115));
+        ELEMENTS.put("Livermorium", new Element("Livermorium", "Lv", 116));
+        ELEMENTS.put("Tennessine", new Element("Tennessine", "Ts", 117));
+        ELEMENTS.put("Oganesson", new Element("Oganesson", "Og", 118));
+
+    }
+
+    public static Map<String, Element> getElements() {
+        return ELEMENTS;
+    }
+}
